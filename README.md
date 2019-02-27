@@ -1,24 +1,46 @@
-# Hootsuite - PHP Pre-commit Hooks
+PHP Pre-commit Hooks
 
 Pre-commit scripts appropiate for *any* PHP project. These hooks are made as custom plugins under the [pre-commit](http://pre-commit.com/#new-hooks) git hook framework.
 
 # Setup
 
-Just add to your `.pre-commit-config.yaml` file with the following
+### macOS users
+
+ - Install [brew](https://brew.sh/)	- Install [brew](https://brew.sh/)
+ - Run `brew install pre-commit`	- Run `brew install pre-commit`
+
+### linux users
+
+- Be sure you have pip installed
+- Run `pip install pre-commit`
+
+
+#### Common steps
+
+- Be sure you have installed [composer](https://getcomposer.org/download/) globally.
+- Ensure you have `~/.composer/vendor/bin` into your PATH
+- run `composer global require "squizlabs/php_codesniffer=*"`.
+
+- Add to your `.pre-commit-config.yaml` file with the following
 
 ```yaml
-- repo: git@github.com:hootsuite/pre-commit-php.git
-  sha: 1.1.0
+repos:
+- repo: git@github.com:buzzoole/pre-commit-php.git
+  rev: 1.2.1
   hooks:
   - id: php-lint
-  - id: php-unit
   - id: php-cs
     files: \.(php)$
-    args: [--standard=PSR1 -p]
+    args: [--standard=PSR2 -p]
   - id: php-cbf
     files: \.(php)$
-    args: [--standard=PSR1 -p]
+    args: [--standard=PSR2 -p]
 ```
+
+- add the `.pre-commit-hooks.yaml` file and the `pre_commit_hooks` from this repository to your repo / service
+- run `pre-commit install --install-hooks`
+
+From now on, all your commits including php files will automatically trigger a series of checks (php-lint, php-cs, php-cbf) which will prevent commits with errors. Those checks will also automatically lint PHP files to be committed.	From now on, all your commits including php files will automatically trigger a series of checks (php-lint, php-cs, php-cbf) which will prevent commits with errors. Those checks will also automatically lint PHP files to be committed.
 
 # Supported Hooks
 
