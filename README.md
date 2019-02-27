@@ -6,8 +6,8 @@ Pre-commit scripts appropiate for *any* PHP project. These hooks are made as cus
 
 ### macOS users
 
- - Install [brew](https://brew.sh/)	- Install [brew](https://brew.sh/)
- - Run `brew install pre-commit`	- Run `brew install pre-commit`
+ - Install [brew](https://brew.sh/)
+ - Run `brew install pre-commit`
 
 ### linux users
 
