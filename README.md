@@ -37,7 +37,6 @@ repos:
     args: [--standard=PSR2 -p]
 ```
 
-- add the `.pre-commit-hooks.yaml` file and the `pre_commit_hooks` from this repository to your repo / service
 - run `pre-commit install --install-hooks`
 
 From now on, all your commits including php files will automatically trigger a series of checks (php-lint, php-cs, php-cbf) which will prevent commits with errors. Those checks will also automatically lint PHP files to be committed.	From now on, all your commits including php files will automatically trigger a series of checks (php-lint, php-cs, php-cbf) which will prevent commits with errors. Those checks will also automatically lint PHP files to be committed.
