@@ -20,6 +20,7 @@ Pre-commit scripts appropiate for *any* PHP project. These hooks are made as cus
 - Be sure you have installed [composer](https://getcomposer.org/download/) globally.
 - Ensure you have `~/.composer/vendor/bin` into your PATH
 - run `composer global require "squizlabs/php_codesniffer=*"`.
+- run `composer global require friendsofphp/php-cs-fixer`.
 
 - Add to your `.pre-commit-config.yaml` file with the following
 
@@ -32,9 +33,9 @@ repos:
   - id: php-cs
     files: \.(php)$
     args: [--standard=PSR2 -p --config-set ignore_warnings_on_exit 1]
-  - id: php-cbf
+  - id: php-cs-fixer
     files: \.(php)$
-    args: [--standard=PSR2 -p -n]
+    args: [--rules=@PSR2 -vv --allow-risky=no]
 ```
 
 - run `pre-commit install --install-hooks`
