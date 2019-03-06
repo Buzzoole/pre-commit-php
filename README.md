@@ -34,7 +34,7 @@ repos:
     args: [--standard=PSR2 -p --config-set ignore_warnings_on_exit 1]
   - id: php-cbf
     files: \.(php)$
-    args: [--standard=PSR2 -p]
+    args: [--standard=PSR2 -p -n]
 ```
 
 - run `pre-commit install --install-hooks`
