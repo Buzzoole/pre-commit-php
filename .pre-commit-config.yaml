@@ -6,6 +6,6 @@ repos:
   - id: php-cs
     files: \.(php)$
     args: [--standard=PSR2 -p --config-set ignore_warnings_on_exit 1]
-  - id: php-cbf
+  - id: php-cs-fixer
     files: \.(php)$
-    args: [--standard=PSR2 -p -n]
+    args: [--rules=@PSR2 -vv --allow-risky=no]
