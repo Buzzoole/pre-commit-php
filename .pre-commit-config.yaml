@@ -1,7 +1,11 @@
-# Pre-commit
-# @see http://pre-commit.com/
-- repo: git://github.com/pre-commit/pre-commit-hooks
-  sha: master
+repos:
+- repo: git@github.com:buzzoole/pre-commit-php.git
+  rev: 1.2.1
   hooks:
-    - id: check-yaml
-      files: \.(yaml|yml)$
+  - id: php-lint
+  - id: php-cs
+    files: \.(php)$
+    args: [--standard=PSR2 -p --config-set ignore_warnings_on_exit 1]
+  - id: php-cbf
+    files: \.(php)$
+    args: [--standard=PSR2 -p]
