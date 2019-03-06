@@ -22,7 +22,7 @@ Pre-commit scripts appropiate for *any* PHP project. These hooks are made as cus
 - run `composer global require "squizlabs/php_codesniffer=*"`.
 - run `composer global require friendsofphp/php-cs-fixer`.
 
-- Add to your `.pre-commit-config.yaml` file with the following
+- Add to your `.pre-commit-config.yaml` file with the following lines
 
 ```yaml
 repos:
@@ -40,7 +40,7 @@ repos:
 
 - run `pre-commit install --install-hooks`
 
-From now on, all your commits including php files will automatically trigger a series of checks (php-lint, php-cs, php-cbf) which will prevent commits with errors. Those checks will also automatically lint PHP files to be committed.	From now on, all your commits including php files will automatically trigger a series of checks (php-lint, php-cs, php-cbf) which will prevent commits with errors. Those checks will also automatically lint PHP files to be committed.
+From now on, all your commits including php files will automatically trigger a series of checks (php-lint, php-cs, php-cs-fixer) which will prevent commits with errors. Those checks will also automatically lint PHP files to be committed.	From now on, all your commits including php files will automatically trigger a series of checks (php-lint, php-cs, php-cbf) which will prevent commits with errors. Those checks will also automatically lint PHP files to be committed.
 
 # Supported Hooks
 
