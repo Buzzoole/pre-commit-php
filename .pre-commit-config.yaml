@@ -8,4 +8,4 @@ repos:
     args: [--standard=PSR2 -p --config-set ignore_warnings_on_exit 1]
   - id: php-cs-fixer
     files: \.(php)$
-    args: [--rules=@PSR2 -vv --allow-risky=no]
+    args: ["--rules=@PSR2,binary_operator_spaces -vv --allow-risky=no"]
